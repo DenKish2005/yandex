@@ -27,7 +27,7 @@ class Circle(QMainWindow):
             qp.end()
 
     def draw_flag(self, qp):
-        qp.setBrush(Qt.yellow)
+        qp.setBrush(QColor(randint(0, 255), randint(0, 255), randint(0, 255)))
         d = randint(30, 200)
         qp.drawEllipse(20, 100, d, d)
         self.flag = False
