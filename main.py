@@ -1,20 +1,18 @@
 import sqlite3
 import sys
 
-import os
-from os import path
-
 from PyQt5.QtCore import *
 from PyQt5 import uic
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from random import randint
+from UI import Ui_MainWindow
 
 
-class Circle(QMainWindow):
+class Circle(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('UI.ui', self)
+        self.setupUi(self)
         self.setWindowTitle('Yellow Circles')
         self.flag = False
         self.button.clicked.connect(self.clicked)
